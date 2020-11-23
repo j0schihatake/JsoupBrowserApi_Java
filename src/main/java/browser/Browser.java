@@ -10,10 +10,13 @@ public class Browser extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/Browser.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Browser.fxml"));
+        Parent root = loader.load();
+        primaryStage.setTitle("FXBrowser");
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
+        Controller controller = (Controller)loader.getController();
+        controller.init();
     }
 
 

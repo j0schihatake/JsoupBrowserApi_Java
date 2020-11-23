@@ -1,5 +1,25 @@
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<GridPane fx:controller="browser.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<GridPane alignment="center" hgap="10" prefHeight="877.0" prefWidth="1225.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="browser.Controller">
+   <children>
+      <VBox prefHeight="911.0" prefWidth="1225.0">
+         <children>
+            <TextField fx:id="urlField" prefHeight="31.0" prefWidth="1159.0" onKeyReleased="#loadUrl"/>
+            <WebView fx:id="browserView" prefHeight="737.0" prefWidth="1225.0" />
+         </children>
+      </VBox>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
 </GridPane>
