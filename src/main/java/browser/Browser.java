@@ -10,6 +10,10 @@ public class Browser extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
+        // Настройка для возможности авторизации в google:
+        System.setProperty("sun.net.http.allowRestrictedHeaders", "true");
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Browser.fxml"));
         Parent root = loader.load();
         primaryStage.setTitle("FXBrowser");
